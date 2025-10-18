@@ -22,10 +22,12 @@
             ]
           },
           {
-            "group": "Customization",
+            "group": "Core Features of LokiProxy",
             "pages": [
-              "essentials/settings",
-              "essentials/navigation"
+              "feature/products",
+              "feature/api",
+              "feature/userpass",
+              "feature/account"
             ]
           },
           {
