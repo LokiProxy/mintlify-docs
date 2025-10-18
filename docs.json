@@ -31,26 +31,26 @@
             ]
           },
           {
-            "group": "Writing content",
+            "group": "Configure Proxies",
             "pages": [
-              "essentials/markdown",
-              "essentials/code",
-              "essentials/images",
-              "essentials/reusable-snippets"
+              "Configure/rotating",
+              "Configure/unlimited",
+              "Configure/static"
             ]
           },
           {
-            "group": "AI tools",
+            "group": "Integrations",
             "pages": [
-              "ai-tools/cursor",
-              "ai-tools/claude-code",
-              "ai-tools/windsurf"
+              "Integrations/bit",
+              "Integrations/hub",
+              "Integrations/mulogin",
+              "Integrations/yunlark"
             ]
           }
         ]
       },
       {
-        "tab": "API reference",
+        "tab": "FAQ",
         "groups": [
           {
             "group": "API documentation",
