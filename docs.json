@@ -37,14 +37,28 @@
               "Configure/unlimited",
               "Configure/static"
             ]
-          },
+          }
+        ]
+      },
+            {
+        "tab": "Integrations",
+        "groups": [
           {
-            "group": "Integrations",
+            "group": "Anti-detect Browser",
             "pages": [
               "Integrations/bit",
               "Integrations/hub",
               "Integrations/mulogin",
               "Integrations/yunlark"
+            ]
+          },
+          {
+            "group": "Core Features of LokiProxy",
+            "pages": [
+              "feature/products",
+              "feature/api",
+              "feature/userpass",
+              "feature/account"
             ]
           }
         ]
