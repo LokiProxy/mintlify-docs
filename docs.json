@@ -71,13 +71,13 @@
     "global": {
       "anchors": [
         {
-          "anchor": "Documentation",
-          "href": "https://mintlify.com/docs",
+          "anchor": "Pricing",
+          "href": "https://www.lokiproxy.com/pricing/rotating-residenial-proxy",
           "icon": "book-open-cover"
         },
         {
           "anchor": "Blog",
-          "href": "https://mintlify.com/blog",
+          "href": "https://www.lokiproxy.com/blog",
           "icon": "newspaper"
         }
       ]
@@ -91,13 +91,13 @@
     "links": [
       {
         "label": "Support",
-        "href": "mailto:hi@mintlify.com"
+        "href": "mailto:support@lokiproxy.com"
       }
     ],
     "primary": {
       "type": "button",
       "label": "Dashboard",
-      "href": "https://dashboard.mintlify.com"
+      "href": "https://dashboard.lokiproxy.com"
     }
   },
   "contextual": {
@@ -114,9 +114,10 @@
   },
   "footer": {
     "socials": {
-      "x": "https://x.com/mintlify",
-      "github": "https://github.com/mintlify",
-      "linkedin": "https://linkedin.com/company/mintlify"
+      "x": "https://x.com/LokiProxy",
+      "facebook": "https://www.facebook.com/profile.php?id=61581026548549",
+      "youtube": "https://www.youtube.com/@lokiproxy",
+      "telegram": "https://t.me/lokiproxy"
     }
   }
 }
