@@ -51,15 +51,6 @@
               "Integrations/mulogin",
               "Integrations/yunlark"
             ]
-          },
-          {
-            "group": "Core Features of LokiProxy",
-            "pages": [
-              "feature/products",
-              "feature/api",
-              "feature/userpass",
-              "feature/account"
-            ]
           }
         ]
       },
@@ -71,7 +62,7 @@
       },
             {
         "tab": "Support",
-        "href": "https://www.lokiproxy.com/pricing/rotating-residenial-proxy"
+        "href": "https://t.me/lokiproxy"
       }
     ],
     "global": {
