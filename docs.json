@@ -92,7 +92,7 @@
           {
             "group": "歡迎來到LokiProxy",
             "pages": [
-              "index",
+              "zh/index",
               "introduction",
               "quick-start-guide"
             ]
