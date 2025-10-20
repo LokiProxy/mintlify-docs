@@ -9,9 +9,12 @@
   },
   "favicon": "/loki-favicon.svg",
   "navigation": {
+        "languages": [ 
+      {
+        "language": "en",
     "tabs": [
       {
-        "tab": "Guides1",
+        "tab": "Guides",
         "groups": [
           {
             "group": "Welcome to LokiProxy",
@@ -79,6 +82,81 @@
         }
       ]
     }
+      },
+      {
+        "language": "cn",
+    "tabs": [
+      {
+        "tab": "Guides",
+        "groups": [
+          {
+            "group": "Welcome to LokiProxy",
+            "pages": [
+              "index",
+              "introduction",
+              "quick-start-guide"
+            ]
+          },
+          {
+            "group": "Core Features of LokiProxy",
+            "pages": [
+              "features/our-products",
+              "features/api-ip-whitelist",
+              "features/username-password",
+              "features/account-orders"
+            ]
+          },
+          {
+            "group": "Configure Proxies",
+            "pages": [
+              "configure-proxies/rotating-residential-proxy",
+              "configure-proxies/unlimited-residential-proxy",
+              "configure-proxies/static-residential-proxy"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Integrations",
+        "groups": [
+          {
+            "group": "Anti-detect Browser",
+            "pages": [
+              "integrations/bitbrowser",
+              "integrations/hubstudio",
+              "integrations/mulogin",
+              "integrations/yunlark"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "FAQ",
+        "pages": [
+          "faq/faq"
+        ]
+      },
+      {
+        "tab": "Support",
+        "href": "https://t.me/lokiproxy"
+      }
+    ],
+    "global": {
+      "anchors": [
+        {
+          "anchor": "Pricing",
+          "href": "https://www.lokiproxy.com/pricing/rotating-residenial-proxy",
+          "icon": "book-open-cover"
+        },
+        {
+          "anchor": "Blog",
+          "href": "https://www.lokiproxy.com/blog",
+          "icon": "newspaper"
+        }
+      ]
+    }
+      }
+        ]
   },
   "logo": {
     "light": "/logo/light.svg",
