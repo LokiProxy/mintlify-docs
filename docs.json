@@ -1,204 +1,179 @@
 {
   "$schema": "https://mintlify.com/docs.json",
-  "theme": "mint",
-  "name": "LokiProxy Help Center",
+  "theme": "maple",
+  "name": "Example Co.",
+  "description": "Example Co. 是一家提供示例内容和占位符文本的公司。",
   "colors": {
-    "primary": "#16A34A",
-    "light": "#07C983",
-    "dark": "#15803D"
+    "primary": "#3B82F6",
+    "light": "#F8FAFC",
+    "dark": "#0F172A"
   },
-  "favicon": "/loki-favicon.svg",
   "navigation": {
-        "languages": [ 
+    "global": {
+      "anchors": [
+        {
+          "anchor": "文档",
+          "href": "https://mintlify.com/docs"
+        },
+        {
+          "anchor": "更新日志",
+          "href": "https://mintlify.com/docs/changelog"
+        }
+      ]
+    },
+    "languages": [ 
       {
         "language": "en",
-    "tabs": [
-      {
-        "tab": "Guides",
-        "groups": [
+        "dropdowns": [
           {
-            "group": "Welcome to LokiProxy",
+            "dropdown": "文档",
+            "icon": "book",
+            "description": "如何使用 Example Co. 产品",
             "pages": [
-              "index",
-              "introduction",
-              "quick-start-guide"
+              {
+                "group": "快速入门",
+                "pages": ["index", "quickstart"]
+              },
+              {
+                "group": "自定义配置",
+                "pages": ["settings", "users", "features"]
+              },
+              {
+                "group": "计费管理",
+                "pages": [
+                  "billing/overview",
+                  "billing/payments",
+                  "billing/subscriptions"
+                ]
+              }
             ]
           },
           {
-            "group": "Core Features of LokiProxy",
-            "pages": [
-              "features/our-products",
-              "features/api-ip-whitelist",
-              "features/username-password",
-              "features/account-orders"
-            ]
-          },
-          {
-            "group": "Configure Proxies",
-            "pages": [
-              "configure-proxies/rotating-residential-proxy",
-              "configure-proxies/unlimited-residential-proxy",
-              "configure-proxies/static-residential-proxy"
-            ]
+            "dropdown": "更新日志",
+            "icon": "history",
+            "description": "产品更新和变更记录",
+            "pages": ["changelog"]
           }
         ]
       },
       {
-        "tab": "Integrations",
-        "groups": [
+        "language": "es",
+        "dropdowns": [
           {
-            "group": "Anti-detect Browser",
+            "dropdown": "Documentación",
+            "icon": "book",
+            "description": "Cómo usar el producto de Example Co.",
             "pages": [
-              "integrations/bitbrowser",
-              "integrations/hubstudio",
-              "integrations/mulogin",
-              "integrations/yunlark"
+              {
+                "group": "Comenzando",
+                "pages": ["es/index", "es/quickstart"]
+              },
+              {
+                "group": "Personalización",
+                "pages": ["es/settings", "es/users", "es/features"]
+              },
+              {
+                "group": "Billing",
+                "pages": [
+                  "es/billing/overview",
+                  "es/billing/payments",
+                  "es/billing/subscriptions"
+                ]
+              }
             ]
+          },
+          {
+            "dropdown": "Changelog",
+            "icon": "history",
+            "description": "Actualizaciones y cambios",
+            "pages": ["es/changelog"]
           }
         ]
-      },
-      {
-        "tab": "FAQ",
-        "pages": [
-          "faq/faq"
-        ]
-      },
-      {
-        "tab": "Support",
-        "href": "https://t.me/lokiproxy"
       }
-    ],
-    "global": {
-      "anchors": [
-        {
-          "anchor": "Pricing",
-          "href": "https://www.lokiproxy.com/pricing/rotating-residenial-proxy",
-          "icon": "book-open-cover"
-        },
-        {
-          "anchor": "Blog",
-          "href": "https://www.lokiproxy.com/blog",
-          "icon": "newspaper"
-        }
-      ]
-    }
-      },
-      {
-        "language": "zh",
-    "tabs": [
-      {
-        "tab": "Guides",
-        "groups": [
-          {
-            "group": "Welcome to LokiProxy",
-            "pages": [
-              "index",
-              "introduction",
-              "quick-start-guide"
-            ]
-          },
-          {
-            "group": "Core Features of LokiProxy",
-            "pages": [
-              "features/our-products",
-              "features/api-ip-whitelist",
-              "features/username-password",
-              "features/account-orders"
-            ]
-          },
-          {
-            "group": "Configure Proxies",
-            "pages": [
-              "configure-proxies/rotating-residential-proxy",
-              "configure-proxies/unlimited-residential-proxy",
-              "configure-proxies/static-residential-proxy"
-            ]
-          }
-        ]
-      },
-      {
-        "tab": "Integrations",
-        "groups": [
-          {
-            "group": "Anti-detect Browser",
-            "pages": [
-              "integrations/bitbrowser",
-              "integrations/hubstudio",
-              "integrations/mulogin",
-              "integrations/yunlark"
-            ]
-          }
-        ]
-      },
-      {
-        "tab": "FAQ",
-        "pages": [
-          "faq/faq"
-        ]
-      },
-      {
-        "tab": "Support",
-        "href": "https://t.me/lokiproxy"
-      }
-    ],
-    "global": {
-      "anchors": [
-        {
-          "anchor": "Pricing",
-          "href": "https://www.lokiproxy.com/pricing/rotating-residenial-proxy",
-          "icon": "book-open-cover"
-        },
-        {
-          "anchor": "Blog",
-          "href": "https://www.lokiproxy.com/blog",
-          "icon": "newspaper"
-        }
-      ]
-    }
-      }
-        ]
+    ]
   },
   "logo": {
-    "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg",
-    "href": "https://www.lokiproxy.com"
+    "light": "/logo-light.svg",
+    "dark": "/logo-dark.svg",
+    "href": "https://example.com"
   },
   "navbar": {
     "links": [
       {
-        "label": "Support",
-        "href": "mailto:support@lokiproxy.com"
+        "label": "社区",
+        "href": "https://example.com/community"
       }
     ],
     "primary": {
       "type": "button",
-      "label": "Dashboard",
-      "href": "https://dashboard.lokiproxy.com"
+      "label": "立即开始",
+      "href": "https://example.com/start"
     }
-  },
-  "contextual": {
-    "options": [
-      "copy",
-      "view",
-      "chatgpt",
-      "claude",
-      "perplexity",
-      "mcp",
-      "cursor",
-      "vscode"
-    ]
   },
   "footer": {
     "socials": {
-      "x": "https://x.com/LokiProxy",
-      "facebook": "https://www.facebook.com/profile.php?id=61581026548549",
-      "youtube": "https://www.youtube.com/@lokiproxy",
-      "telegram": "https://t.me/lokiproxy_official"
+      "x": "https://x.com/example",
+      "linkedin": "https://www.linkedin.com/company/example",
+      "github": "https://github.com/example",
+      "slack": "https://example.com/community"
+    },
+    "links": [
+      {
+        "header": "资源",
+        "items": [
+          {
+            "label": "客户案例",
+            "href": "https://example.com/customers"
+          },
+          {
+            "label": "企业版",
+            "href": "https://example.com/enterprise"
+          },
+          {
+            "label": "申请试用",
+            "href": "https://example.com/preview"
+          }
+        ]
+      },
+      {
+        "header": "公司",
+        "items": [
+          {
+            "label": "招聘信息",
+            "href": "https://example.com/careers"
+          },
+          {
+            "label": "博客",
+            "href": "https://example.com/blog"
+          },
+          {
+            "label": "隐私政策",
+            "href": "https://example.com/legal/privacy"
+          }
+        ]
+      }
+    ]
+  },
+  "integrations": {
+    "ga4": {
+      "measurementId": "G-XXXXXXXXXX"
+    },
+    "telemetry": {
+      "enabled": true
+    },
+    "cookies": {
+      "key": "example_cookie_key",
+      "value": "example_cookie_value"
     }
   },
-   "internationalization": {
-    "enabled": true,
-    "defaultLanguage": "zh",
-    "supportedLanguages": ["zh", "en"]
+  "contextual": {
+    "options": ["copy", "view", "chatgpt", "claude"]
+  },
+  "errors": {
+    "404": {
+      "redirect": false,
+      "title": "页面未找到",
+      "description": "这个_页面_到底**怎么了**？"
+    }
   }
 }
