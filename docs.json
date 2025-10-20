@@ -166,7 +166,7 @@
   "navbar": {
     "links": [
       {
-        "label": "Support1",
+        "label": "Support",
         "href": "mailto:support@lokiproxy.com"
       }
     ],
