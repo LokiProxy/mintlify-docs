@@ -195,5 +195,10 @@
       "youtube": "https://www.youtube.com/@lokiproxy",
       "telegram": "https://t.me/lokiproxy_official"
     }
+  },
+   "internationalization": {
+    "enabled": true,
+    "defaultLanguage": "zh",
+    "supportedLanguages": ["zh", "en"]
   }
 }
