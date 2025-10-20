@@ -87,10 +87,10 @@
         "language": "zh",
     "tabs": [
       {
-        "tab": "你好",
+        "tab": "使用指南",
         "groups": [
           {
-            "group": "Welcome to LokiProxy",
+            "group": "歡迎來到LokiProxy",
             "pages": [
               "index",
               "introduction",
@@ -98,7 +98,7 @@
             ]
           },
           {
-            "group": "Core Features of LokiProxy",
+            "group": "LokiProxy的主要功能",
             "pages": [
               "features/our-products",
               "features/api-ip-whitelist",
@@ -107,7 +107,7 @@
             ]
           },
           {
-            "group": "Configure Proxies",
+            "group": "配置代理",
             "pages": [
               "configure-proxies/rotating-residential-proxy",
               "configure-proxies/unlimited-residential-proxy",
@@ -117,7 +117,7 @@
         ]
       },
       {
-        "tab": "Integrations",
+        "tab": "集成指南",
         "groups": [
           {
             "group": "Anti-detect Browser",
@@ -131,25 +131,25 @@
         ]
       },
       {
-        "tab": "FAQ",
+        "tab": "常見問題",
         "pages": [
           "faq/faq"
         ]
       },
       {
-        "tab": "Support",
+        "tab": "聯係客服",
         "href": "https://t.me/lokiproxy"
       }
     ],
     "global": {
       "anchors": [
         {
-          "anchor": "Pricing",
+          "anchor": "查看定價",
           "href": "https://www.lokiproxy.com/pricing/rotating-residenial-proxy",
           "icon": "book-open-cover"
         },
         {
-          "anchor": "Blog",
+          "anchor": "博客文章",
           "href": "https://www.lokiproxy.com/blog",
           "icon": "newspaper"
         }
