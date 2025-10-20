@@ -17,17 +17,17 @@
             "group": "Getting started",
             "pages": [
               "index",
-              "getstarted",
-              "quickstart"
+              "how-to-join-lokiproxy",
+              "quick-start-guide"
             ]
           },
           {
             "group": "Core Features of LokiProxy",
             "pages": [
-              "feature/our-products",
-              "feature/api-ip-whitelist",
-              "feature/username-password",
-              "feature/account-orders"
+              "features/our-products",
+              "features/api-ip-whitelist",
+              "features/username-password",
+              "features/account-orders"
             ]
           },
           {
