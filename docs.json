@@ -24,10 +24,10 @@
           {
             "group": "Core Features of LokiProxy",
             "pages": [
-              "feature/products",
-              "feature/api",
-              "feature/userpass",
-              "feature/account"
+              "feature/our-products",
+              "feature/api-ip-whitelist",
+              "feature/username-password",
+              "feature/account-orders"
             ]
           },
           {
@@ -46,8 +46,8 @@
           {
             "group": "Anti-detect Browser",
             "pages": [
-              "integrations/bit",
-              "integrations/hub",
+              "integrations/bitbrowser",
+              "integrations/hubstudio",
               "integrations/mulogin",
               "integrations/yunlark"
             ]
