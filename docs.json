@@ -33,9 +33,9 @@
           {
             "group": "Configure Proxies",
             "pages": [
-              "Configure/rotating",
-              "Configure/unlimited",
-              "Configure/static"
+              "configure-proxies/rotating-residential-proxy",
+              "Configure-proxies/unlimited-residential-proxy",
+              "Configure-proxies/static-residential-proxy"
             ]
           }
         ]
