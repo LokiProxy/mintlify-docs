@@ -109,9 +109,9 @@
           {
             "group": "配置代理",
             "pages": [
-              "configure-proxies/rotating-residential-proxy",
-              "configure-proxies/unlimited-residential-proxy",
-              "configure-proxies/static-residential-proxy"
+              "zh/configure-proxies/rotating-residential-proxy",
+              "zh/configure-proxies/unlimited-residential-proxy",
+              "zh/configure-proxies/static-residential-proxy"
             ]
           }
         ]
@@ -133,7 +133,7 @@
       {
         "tab": "常見問題",
         "pages": [
-          "faq/faq"
+          "zh/faq/faq"
         ]
       },
       {
