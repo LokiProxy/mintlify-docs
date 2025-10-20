@@ -93,8 +93,8 @@
             "group": "歡迎來到LokiProxy",
             "pages": [
               "zh/index",
-              "introduction",
-              "quick-start-guide"
+              "zh/introduction",
+              "zh/quick-start-guide"
             ]
           },
           {
