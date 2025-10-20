@@ -17,6 +17,7 @@
             "group": "Welcome to LokiProxy",
             "pages": [
               "index",
+              "introduction",
               "quick-start-guide"
             ]
           },
