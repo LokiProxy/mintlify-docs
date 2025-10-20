@@ -17,7 +17,6 @@
             "group": "Welcome to LokiProxy",
             "pages": [
               "index",
-              "how-to-join-lokiproxy",
               "quick-start-guide"
             ]
           },
@@ -40,7 +39,7 @@
           }
         ]
       },
-            {
+      {
         "tab": "Integrations",
         "groups": [
           {
@@ -57,10 +56,10 @@
       {
         "tab": "FAQ",
         "pages": [
-              "faq/faq"
-            ]
+          "faq/faq"
+        ]
       },
-            {
+      {
         "tab": "Support",
         "href": "https://t.me/lokiproxy"
       }
@@ -100,15 +99,15 @@
   },
   "contextual": {
     "options": [
-     "copy",
-     "view",
-     "chatgpt",
-     "claude",
-     "perplexity",
-     "mcp",
-     "cursor",
-     "vscode"
-   ]
+      "copy",
+      "view",
+      "chatgpt",
+      "claude",
+      "perplexity",
+      "mcp",
+      "cursor",
+      "vscode"
+    ]
   },
   "footer": {
     "socials": {
