@@ -120,9 +120,9 @@
         "tab": "集成指南",
         "groups": [
           {
-            "group": "Anti-detect Browser",
+            "group": "反檢測瀏覽器",
             "pages": [
-              "integrations/bitbrowser",
+              "zh/integrations/bitbrowser",
               "integrations/hubstudio",
               "integrations/mulogin",
               "integrations/yunlark"
