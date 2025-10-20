@@ -46,10 +46,10 @@
           {
             "group": "Anti-detect Browser",
             "pages": [
-              "Integrations/bit",
-              "Integrations/hub",
-              "Integrations/mulogin",
-              "Integrations/yunlark"
+              "integrations/bit",
+              "integrations/hub",
+              "integrations/mulogin",
+              "integrations/yunlark"
             ]
           }
         ]
