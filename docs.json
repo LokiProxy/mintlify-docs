@@ -100,10 +100,10 @@
           {
             "group": "LokiProxy的主要功能",
             "pages": [
-              "features/our-products",
-              "features/api-ip-whitelist",
-              "features/username-password",
-              "features/account-orders"
+              "zh/features/our-products",
+              "zh/features/api-ip-whitelist",
+              "zh/features/username-password",
+              "zh/features/account-orders"
             ]
           },
           {
@@ -123,9 +123,8 @@
             "group": "反檢測瀏覽器",
             "pages": [
               "zh/integrations/bitbrowser",
-              "integrations/hubstudio",
-              "integrations/mulogin",
-              "integrations/yunlark"
+              "zh/integrations/hubstudio",
+              "zh/integrations/mulogin"
             ]
           }
         ]
