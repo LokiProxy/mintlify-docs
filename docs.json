@@ -9,153 +9,153 @@
   },
   "favicon": "/loki-favicon.svg",
   "navigation": {
-        "languages": [ 
+    "languages": [
       {
         "language": "en",
-    "tabs": [
-      {
-        "tab": "Guides",
-        "groups": [
+        "tabs": [
           {
-            "group": "Welcome to LokiProxy",
-            "pages": [
-              "index",
-              "introduction",
-              "quick-start-guide"
+            "tab": "Guides",
+            "groups": [
+              {
+                "group": "Welcome to LokiProxy",
+                "pages": [
+                  "index",
+                  "introduction",
+                  "quick-start-guide"
+                ]
+              },
+              {
+                "group": "Core Features of LokiProxy",
+                "pages": [
+                  "features/our-products",
+                  "features/api-ip-whitelist",
+                  "features/username-password",
+                  "features/account-orders"
+                ]
+              },
+              {
+                "group": "Configure Proxies",
+                "pages": [
+                  "configure-proxies/rotating-residential-proxy",
+                  "configure-proxies/unlimited-residential-proxy",
+                  "configure-proxies/static-residential-proxy"
+                ]
+              }
             ]
           },
           {
-            "group": "Core Features of LokiProxy",
-            "pages": [
-              "features/our-products",
-              "features/api-ip-whitelist",
-              "features/username-password",
-              "features/account-orders"
+            "tab": "Integrations",
+            "groups": [
+              {
+                "group": "Anti-detect Browser",
+                "pages": [
+                  "integrations/bitbrowser",
+                  "integrations/hubstudio",
+                  "integrations/mulogin",
+                  "integrations/yunlark"
+                ]
+              }
             ]
           },
           {
-            "group": "Configure Proxies",
+            "tab": "FAQ",
             "pages": [
-              "configure-proxies/rotating-residential-proxy",
-              "configure-proxies/unlimited-residential-proxy",
-              "configure-proxies/static-residential-proxy"
+              "faq/faq"
             ]
-          }
-        ]
-      },
-      {
-        "tab": "Integrations",
-        "groups": [
+          },
           {
-            "group": "Anti-detect Browser",
-            "pages": [
-              "integrations/bitbrowser",
-              "integrations/hubstudio",
-              "integrations/mulogin",
-              "integrations/yunlark"
-            ]
+            "tab": "Support",
+            "href": "https://www.lokiproxy.com/contactus"
           }
-        ]
-      },
-      {
-        "tab": "FAQ",
-        "pages": [
-          "faq/faq"
-        ]
-      },
-      {
-        "tab": "Support",
-        "href": "https://www.lokiproxy.com/contactus"
-      }
-    ],
-    "global": {
-      "anchors": [
-        {
-          "anchor": "Pricing",
-          "href": "https://www.lokiproxy.com/pricing/rotating-residenial-proxy",
-          "icon": "book-open-cover"
-        },
-        {
-          "anchor": "Blog",
-          "href": "https://www.lokiproxy.com/blog",
-          "icon": "newspaper"
+        ],
+        "global": {
+          "anchors": [
+            {
+              "anchor": "Pricing",
+              "href": "https://www.lokiproxy.com/pricing/rotating-residenial-proxy",
+              "icon": "book-open-cover"
+            },
+            {
+              "anchor": "Blog",
+              "href": "https://www.lokiproxy.com/blog",
+              "icon": "newspaper"
+            }
+          ]
         }
-      ]
-    }
       },
       {
         "language": "zh",
-    "tabs": [
-      {
-        "tab": "使用指南",
-        "groups": [
+        "tabs": [
           {
-            "group": "歡迎來到LokiProxy",
-            "pages": [
-              "zh/index",
-              "zh/introduction",
-              "zh/quick-start-guide"
+            "tab": "使用指南",
+            "groups": [
+              {
+                "group": "歡迎來到LokiProxy",
+                "pages": [
+                  "zh/index",
+                  "zh/introduction",
+                  "zh/quick-start-guide"
+                ]
+              },
+              {
+                "group": "LokiProxy的主要功能",
+                "pages": [
+                  "zh/features/our-products",
+                  "zh/features/api-ip-whitelist",
+                  "zh/features/username-password",
+                  "zh/features/account-orders"
+                ]
+              },
+              {
+                "group": "配置代理",
+                "pages": [
+                  "zh/configure-proxies/rotating-residential-proxy",
+                  "zh/configure-proxies/unlimited-residential-proxy",
+                  "zh/configure-proxies/static-residential-proxy"
+                ]
+              }
             ]
           },
           {
-            "group": "LokiProxy的主要功能",
-            "pages": [
-              "zh/features/our-products",
-              "zh/features/api-ip-whitelist",
-              "zh/features/username-password",
-              "zh/features/account-orders"
+            "tab": "集成指南",
+            "groups": [
+              {
+                "group": "反檢測瀏覽器",
+                "pages": [
+                  "zh/integrations/bitbrowser",
+                  "zh/integrations/hubstudio",
+                  "zh/integrations/mulogin"
+                ]
+              }
             ]
           },
           {
-            "group": "配置代理",
+            "tab": "常見問題",
             "pages": [
-              "zh/configure-proxies/rotating-residential-proxy",
-              "zh/configure-proxies/unlimited-residential-proxy",
-              "zh/configure-proxies/static-residential-proxy"
+              "zh/faq/faq"
             ]
-          }
-        ]
-      },
-      {
-        "tab": "集成指南",
-        "groups": [
+          },
           {
-            "group": "反檢測瀏覽器",
-            "pages": [
-              "zh/integrations/bitbrowser",
-              "zh/integrations/hubstudio",
-              "zh/integrations/mulogin"
-            ]
+            "tab": "聯係客服",
+            "href": "https://www.lokiproxy.com/zh-TW/contactus"
           }
-        ]
-      },
-      {
-        "tab": "常見問題",
-        "pages": [
-          "zh/faq/faq"
-        ]
-      },
-      {
-        "tab": "聯係客服",
-        "href": "https://www.lokiproxy.com/zh-TW/contactus"
-      }
-    ],
-    "global": {
-      "anchors": [
-        {
-          "anchor": "查看定價",
-          "href": "https://www.lokiproxy.com/pricing/rotating-residenial-proxy",
-          "icon": "book-open-cover"
-        },
-        {
-          "anchor": "博客文章",
-          "href": "https://www.lokiproxy.com/blog",
-          "icon": "newspaper"
+        ],
+        "global": {
+          "anchors": [
+            {
+              "anchor": "查看定價",
+              "href": "https://www.lokiproxy.com/pricing/rotating-residenial-proxy",
+              "icon": "book-open-cover"
+            },
+            {
+              "anchor": "博客文章",
+              "href": "https://www.lokiproxy.com/blog",
+              "icon": "newspaper"
+            }
+          ]
         }
-      ]
-    }
       }
-        ]
+    ]
   },
   "logo": {
     "light": "/logo/light.svg",
