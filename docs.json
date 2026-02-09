@@ -52,7 +52,7 @@
                 "pages": [
                   "configure-proxies/rotating-residential-proxy",
                   "configure-proxies/unlimited-residential-proxy",
-                  "configure-proxies/untitled-page",
+                  "configure-proxies/short-term-residential-ips",
                   "configure-proxies/static-residential-proxy"
                 ]
               }
@@ -126,7 +126,7 @@
                 "pages": [
                   "zh/configure-proxies/rotating-residential-proxy",
                   "zh/configure-proxies/unlimited-residential-proxy",
-                  "zh/configure-proxies/ip",
+                  "zh/configure-proxies/short-term-residential-ips",
                   "zh/configure-proxies/static-residential-proxy"
                 ]
               }
