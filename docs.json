@@ -12,6 +12,20 @@
     "languages": [
       {
         "language": "en",
+        "global": {
+          "anchors": [
+            {
+              "anchor": "Pricing",
+              "icon": "book-open-cover",
+              "href": "https://www.lokiproxy.com/pricing/rotating-residenial-proxy"
+            },
+            {
+              "anchor": "Blog",
+              "icon": "newspaper",
+              "href": "https://www.lokiproxy.com/blog"
+            }
+          ]
+        },
         "tabs": [
           {
             "tab": "Guides",
@@ -38,6 +52,7 @@
                 "pages": [
                   "configure-proxies/rotating-residential-proxy",
                   "configure-proxies/unlimited-residential-proxy",
+                  "configure-proxies/untitled-page",
                   "configure-proxies/static-residential-proxy"
                 ]
               }
@@ -67,24 +82,24 @@
             "tab": "Support",
             "href": "https://www.lokiproxy.com/contactus"
           }
-        ],
-        "global": {
-          "anchors": [
-            {
-              "anchor": "Pricing",
-              "href": "https://www.lokiproxy.com/pricing/rotating-residenial-proxy",
-              "icon": "book-open-cover"
-            },
-            {
-              "anchor": "Blog",
-              "href": "https://www.lokiproxy.com/blog",
-              "icon": "newspaper"
-            }
-          ]
-        }
+        ]
       },
       {
         "language": "zh",
+        "global": {
+          "anchors": [
+            {
+              "anchor": "查看定價",
+              "icon": "book-open-cover",
+              "href": "https://www.lokiproxy.com/pricing/rotating-residenial-proxy"
+            },
+            {
+              "anchor": "博客文章",
+              "icon": "newspaper",
+              "href": "https://www.lokiproxy.com/blog"
+            }
+          ]
+        },
         "tabs": [
           {
             "tab": "使用指南",
@@ -111,6 +126,7 @@
                 "pages": [
                   "zh/configure-proxies/rotating-residential-proxy",
                   "zh/configure-proxies/unlimited-residential-proxy",
+                  "zh/configure-proxies/ip",
                   "zh/configure-proxies/static-residential-proxy"
                 ]
               }
@@ -139,21 +155,7 @@
             "tab": "聯係客服",
             "href": "https://www.lokiproxy.com/zh-TW/contactus"
           }
-        ],
-        "global": {
-          "anchors": [
-            {
-              "anchor": "查看定價",
-              "href": "https://www.lokiproxy.com/pricing/rotating-residenial-proxy",
-              "icon": "book-open-cover"
-            },
-            {
-              "anchor": "博客文章",
-              "href": "https://www.lokiproxy.com/blog",
-              "icon": "newspaper"
-            }
-          ]
-        }
+        ]
       }
     ]
   },
