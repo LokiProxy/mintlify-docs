@@ -129,7 +129,7 @@
                   {
                     "group": "短效住宅IP",
                     "pages": [
-                      "file-1",
+                      "zh/configure-proxies/client-app",
                       "zh/configure-proxies/short-term-residential-ips"
                     ]
                   },
