@@ -50,6 +50,8 @@
               {
                 "group": "Configure Proxies",
                 "pages": [
+                  "configure-proxies/rotating-residential-proxy",
+                  "configure-proxies/unlimited-residential-proxy",
                   {
                     "group": "Short-term-Residential-IPs",
                     "pages": [
@@ -57,8 +59,6 @@
                       "configure-proxies/short-term-residential-ips"
                     ]
                   },
-                  "configure-proxies/rotating-residential-proxy",
-                  "configure-proxies/unlimited-residential-proxy",
                   "configure-proxies/static-residential-proxy"
                 ]
               }
