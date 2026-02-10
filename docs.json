@@ -50,9 +50,15 @@
               {
                 "group": "Configure Proxies",
                 "pages": [
+                  {
+                    "group": "Short-term-Residential-IPs",
+                    "pages": [
+                      "configure-proxies/use-via-client-app",
+                      "configure-proxies/short-term-residential-ips"
+                    ]
+                  },
                   "configure-proxies/rotating-residential-proxy",
                   "configure-proxies/unlimited-residential-proxy",
-                  "configure-proxies/short-term-residential-ips",
                   "configure-proxies/static-residential-proxy"
                 ]
               }
@@ -129,7 +135,7 @@
                   {
                     "group": "短效住宅IP",
                     "pages": [
-                      "zh/configure-proxies/client-app",
+                      "zh/configure-proxies/use-via-client-app",
                       "zh/configure-proxies/short-term-residential-ips"
                     ]
                   },
