@@ -126,7 +126,13 @@
                 "pages": [
                   "zh/configure-proxies/rotating-residential-proxy",
                   "zh/configure-proxies/unlimited-residential-proxy",
-                  "zh/configure-proxies/short-term-residential-ips",
+                  {
+                    "group": "短效住宅IP",
+                    "pages": [
+                      "file-1",
+                      "zh/configure-proxies/short-term-residential-ips"
+                    ]
+                  },
                   "zh/configure-proxies/static-residential-proxy"
                 ]
               }
