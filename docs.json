@@ -81,7 +81,16 @@
           {
             "tab": "FAQ",
             "pages": [
-              "faq/faq"
+              "faq/faq",
+              {
+                "group": "FAQ",
+                "pages": [
+                  "rotating-residential-proxy",
+                  "short-term-residential-ips",
+                  "unlimited-residential-proxy",
+                  "static-residential-proxy"
+                ]
+              }
             ]
           },
           {
@@ -139,7 +148,8 @@
                       "zh/configure-proxies/short-term-residential-ips"
                     ]
                   },
-                  "zh/configure-proxies/static-residential-proxy"
+                  "zh/configure-proxies/static-residential-proxy",
+                  "file-1"
                 ]
               }
             ]
@@ -160,7 +170,16 @@
           {
             "tab": "常見問題",
             "pages": [
-              "zh/faq/faq"
+              "zh/faq/faq",
+              {
+                "group": "常見問題解答",
+                "pages": [
+                  "untitled-page",
+                  "ip",
+                  "file",
+                  "file-2"
+                ]
+              }
             ]
           },
           {
