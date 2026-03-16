@@ -172,7 +172,12 @@
               "zh/faq/faq",
               {
                 "group": "常見問題解答",
-                "pages": []
+                "pages": [
+                  "zh/faq/Rotating-faq",
+                  "zh/faq/Short-term-faq",
+                  "zh/faq/Unlimited-faq",
+                  "zh/faq/Static-faq"
+                ]
               }
             ]
           },
