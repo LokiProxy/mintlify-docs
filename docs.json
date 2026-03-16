@@ -172,12 +172,7 @@
               "zh/faq/faq",
               {
                 "group": "常見問題解答",
-                "pages": [
-                  "untitled-page",
-                  "ip",
-                  "file",
-                  "file-2"
-                ]
+                "pages": []
               }
             ]
           },
