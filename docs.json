@@ -85,10 +85,10 @@
               {
                 "group": "FAQ",
                 "pages": [
-                  "rotating-residential-proxy",
-                  "short-term-residential-ips",
-                  "unlimited-residential-proxy",
-                  "static-residential-proxy"
+                  "faq/rotating-residential-proxy",
+                  "faq/short-term-faq",
+                  "faq/unlimited-faq",
+                  "faq/static-faq"
                 ]
               }
             ]
