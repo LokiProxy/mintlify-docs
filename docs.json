@@ -163,6 +163,12 @@
                   "zh/integrations/hubstudio",
                   "zh/integrations/mulogin"
                 ]
+              },
+              {
+                "group": "代理管理器",
+                "pages": [
+                  "windows-v2ray-n-loki-proxy"
+                ]
               }
             ]
           },
