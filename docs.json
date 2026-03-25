@@ -168,7 +168,8 @@
                 "group": "代理管理器",
                 "pages": [
                   "windows-v2ray-n-loki-proxy",
-                  "i-phone-shadowrocket-loki-proxy"
+                  "i-phone-shadowrocket-loki-proxy",
+                  "v2ray-ng-loki-proxy"
                 ]
               }
             ]
