@@ -169,7 +169,8 @@
                 "pages": [
                   "windows-v2rayn-lokiproxy",
                   "iphone-shadowrocket-lokiproxy",
-                  "v2rayng-lokiproxy"
+                  "v2rayng-lokiproxy",
+                  "an-xray-loki-proxy"
                 ]
               }
             ]
