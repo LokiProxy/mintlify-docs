@@ -59,7 +59,8 @@
                       "configure-proxies/short-term-residential-ips"
                     ]
                   },
-                  "configure-proxies/static-residential-proxy"
+                  "configure-proxies/static-residential-proxy",
+                  "configure-proxies/mobile-proxy"
                 ]
               }
             ]
@@ -148,7 +149,8 @@
                       "zh/configure-proxies/short-term-residential-ips"
                     ]
                   },
-                  "zh/configure-proxies/static-residential-proxy"
+                  "zh/configure-proxies/static-residential-proxy",
+                  "zh/configure-proxies/mobile-proxy"
                 ]
               }
             ]
