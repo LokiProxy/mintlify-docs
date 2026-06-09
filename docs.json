@@ -173,7 +173,8 @@
                   "iphone-shadowrocket-lokiproxy",
                   "v2rayng-lokiproxy",
                   "anxray-lokiproxy"
-                ]
+                ],
+                "hidden": true
               }
             ]
           },
