@@ -152,7 +152,7 @@
                   },
                   "zh/configure-proxies/static-residential-proxy",
                   "zh/configure-proxies/mobile-proxy",
-                  "zh/configure-proxies/datacenter-ipv6-proxy"
+                  "zh/configure-proxies/ipv6-proxy"
                 ]
               }
             ]
