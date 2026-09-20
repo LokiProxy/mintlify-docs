@@ -61,7 +61,7 @@
                   },
                   "configure-proxies/static-residential-proxy",
                   "configure-proxies/mobile-proxy",
-                  "configure-proxies/datacenter-ipv6-proxy"
+                  "configure-proxies/ipv6-proxy"
                 ]
               }
             ]
