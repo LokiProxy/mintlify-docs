@@ -90,7 +90,10 @@
                   "faq/rotating-residential-proxy",
                   "faq/short-term-faq",
                   "faq/unlimited-faq",
-                  "faq/static-faq"
+                  "faq/static-faq",
+                  "faq/mobile-proxy",
+                  "faq/high-purity-residential-proxy",
+                  "faq/ipv6-proxy"
                 ]
               }
             ]
@@ -190,7 +193,10 @@
                   "zh/faq/Rotating-faq",
                   "zh/faq/Short-term-faq",
                   "zh/faq/Unlimited-faq",
-                  "zh/faq/Static-faq"
+                  "zh/faq/Static-faq",
+                  "zh/faq/Mobile-faq",
+                  "zh/faq/High-Purity-faq",
+                  "zh/faq/IPv6-faq"
                 ]
               }
             ]
