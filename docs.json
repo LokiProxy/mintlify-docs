@@ -81,6 +81,12 @@
             ]
           },
           {
+            "tab": "API Documentation",
+            "pages": [
+              "untitled-page-2"
+            ]
+          },
+          {
             "tab": "FAQ",
             "pages": [
               "faq/faq",
