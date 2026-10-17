@@ -1,0 +1,238 @@
+---
+title: "API 使用指南"
+---
+
+以下路徑均以您的服務地址為前綴。先取得訪問令牌，再通過`Authorization`請求頭會調用其他接口。請妥善保管帳號密碼和令牌；再次取得令牌後，舊令牌將失效。
+
+## 1.取得訪問令牌
+
+`POST /wapi/token/`，請求體為 JSON：
+
+```http
+Content-Type: application/json
+```
+
+```json
+{
+  "username": "your_email@example.com",
+  "passwd": "your_password"
+}
+```
+
+<table>
+  <colgroup>
+    <col width="230" />
+    <col width="409" />
+  </colgroup>
+  <thead>
+    <tr>
+      <th style={{ textAlign: "center" }}>**參數**</th>
+      <th style={{ textAlign: "center" }}>**說明**</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style={{ textAlign: "center" }}>`username`</td>
+      <td style={{ textAlign: "center" }}>帳號郵箱，必填</td>
+    </tr>
+    <tr>
+      <td style={{ textAlign: "center" }}>`passwd`</td>
+      <td style={{ textAlign: "center" }}>帳號密碼，必填</td>
+    </tr>
+  </tbody>
+</table>
+
+成功時，回應的`results.token`即為訪問令牌：
+
+```json
+{
+  "code": 200,
+  "results": { "token": "YOUR_TOKEN" }
+}
+```
+
+購買過動態 GB、優質動態 GB 套餐或兌換過動態流量的帳號可取得令牌。此接口有訪問頻率限制，收到 HTTP 429 時請稍後重試。
+
+## 2.檢查動態 GB 流量消耗
+
+`GET /wapi/consume/dynamic/chart/`
+
+```http
+Authorization: Bearer YOUR_TOKEN
+```
+
+<table>
+  <colgroup>
+    <col width="127" />
+    <col width="448" />
+  </colgroup>
+  <thead>
+    <tr>
+      <th style={{ textAlign: "center" }}>**查詢參數**</th>
+      <th style={{ textAlign: "center" }}>**說明**</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style={{ textAlign: "center" }}>`suname`</td>
+      <td style={{ textAlign: "center" }}>子帳戶用戶名；不傳或傳空值時查詢主帳戶</td>
+    </tr>
+    <tr>
+      <td style={{ textAlign: "center" }}>`st`</td>
+      <td style={{ textAlign: "center" }}>開始時間，Unix 秒</td>
+    </tr>
+    <tr>
+      <td style={{ textAlign: "center" }}>`et`</td>
+      <td style={{ textAlign: "center" }}>結束時間，Unix 秒</td>
+    </tr>
+  </tbody>
+</table>
+
+示例：`GET /wapi/consume/dynamic/chart/?suname=sub_account&st=1735689600&et=1735776000`
+
+曾購買動態 GB 或動態 GB 高級套餐，或兌換過動態流量的帳號可調用此接口。
+
+## 3.檢查優質動態 GB 流量消耗
+
+`GET /wapi/consume/premium/chart/`
+
+請求頭、查詢參數及回應格式與動態 GB 流量消耗接口相同。示例：`GET /wapi/consume/premium/chart/?suname=sub_account&st=1735689600&et=1735776000`。
+
+曾購買優質動態 GB 套餐的帳號可調用此接口。
+
+兩個流量接口均遵循以下時間與返回規則：
+
+- `st`、`et`任一未提供或不大於 0 時，查詢帳號時區的當天零點至當前時間。
+- `st` 与 `et`相同時，查詢從該時間起的一天；開始時間晚於結束時間將返回參數錯誤。
+- `results`按時間順序排列的數據點；`period`是時間段，`timestamp`是對應的 Unix 秒，`total_traffic_count`是該時間段消耗的流量（字节）。無消耗的時間段回傳 0。
+
+響應示意（數值僅用於說明格式）：
+
+```json
+{
+  "code": 200,
+  "message": "success.",
+  "results": [
+    {
+      "period": "2025-01-01T00:00:00Z",
+      "timestamp": 1735689600,
+      "total_traffic_count": 1048576
+    }
+  ]
+}
+```
+
+## 4.批量創建兌換碼（CDK）
+
+`POST /wapi/cdk/create/`
+
+```http
+Content-Type: application/json
+Authorization: Bearer YOUR_TOKEN
+```
+
+<table>
+  <colgroup>
+    <col width="118" />
+    <col width="494" />
+  </colgroup>
+  <thead>
+    <tr>
+      <th style={{ textAlign: "center" }}>參數</th>
+      <th style={{ textAlign: "center" }}>說明</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style={{ textAlign: "center" }}>`cdk_type`</td>
+      <td style={{ textAlign: "center" }}>必填：1 動態流量、2 IP 數量、3 移動流量</td>
+    </tr>
+    <tr>
+      <td style={{ textAlign: "center" }}>`flow`</td>
+      <td style={{ textAlign: "center" }}>類型 1、3 必填；每個兌換碼的流量，單位 GB，範圍 1～10000</td>
+    </tr>
+    <tr>
+      <td style={{ textAlign: "center" }}>`ip`</td>
+      <td style={{ textAlign: "center" }}>類型 2 必填；每個兌換碼的 IP 數量，範圍 1～10000</td>
+    </tr>
+    <tr>
+      <td style={{ textAlign: "center" }}>`day`</td>
+      <td style={{ textAlign: "center" }}>類型 1、3 的有效天數</td>
+    </tr>
+    <tr>
+      <td style={{ textAlign: "center" }}>`num`</td>
+      <td style={{ textAlign: "center" }}>必填；生成數量，範圍 1～10000</td>
+    </tr>
+  </tbody>
+</table>
+
+動態流量兌換碼範例：
+
+```json
+{
+  "cdk_type": 1,
+  "flow": 10,
+  "day": 30,
+  "num": 2
+}
+```
+
+成功時，`results`是生成的兌換碼列表；其中`Cdk`是兌換碼，`Type`是類型，`Flow`是字节数，`Ip`是 IP 數量，`Days`是有效天數：
+
+```json
+{
+  "code": 200,
+  "results": [
+    { "Cdk": "EXAMPLE1", "Type": 1, "Flow": 10000000000, "Ip": 0, "Days": 30 }
+  ]
+}
+```
+
+請確保帳戶擁有足夠的對應資源；資源不足時整批創建會失敗。請勿同時提交相同的創建請求。此接口有訪問頻率限制，收到 HTTP 429 時請稍後重試。
+
+## 常见错误
+
+<table>
+  <colgroup>
+    <col width="100" />
+    <col width="409" />
+  </colgroup>
+  <thead>
+    <tr>
+      <th style={{ textAlign: "center" }}>`code`</th>
+      <th style={{ textAlign: "center" }}>**含義**</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style={{ textAlign: "center" }}>`41001`</td>
+      <td style={{ textAlign: "center" }}>查詢參數錯誤，或指定的子帳戶不存在</td>
+    </tr>
+    <tr>
+      <td style={{ textAlign: "center" }}>`41003`</td>
+      <td style={{ textAlign: "center" }}>帳號或密碼錯誤</td>
+    </tr>
+    <tr>
+      <td style={{ textAlign: "center" }}>`41005`</td>
+      <td style={{ textAlign: "center" }}>當前帳號不具備相應接口的使用資格</td>
+    </tr>
+    <tr>
+      <td style={{ textAlign: "center" }}>`41010`</td>
+      <td style={{ textAlign: "center" }}>令牌無效（HTTP 403）</td>
+    </tr>
+    <tr>
+      <td style={{ textAlign: "center" }}>`40049`</td>
+      <td style={{ textAlign: "center" }}>創建兌換碼的參數不合法</td>
+    </tr>
+    <tr>
+      <td style={{ textAlign: "center" }}>`40052`</td>
+      <td style={{ textAlign: "center" }}>創建兌換碼失敗，例如對應資源不足</td>
+    </tr>
+    <tr>
+      <td style={{ textAlign: "center" }}>`40901`</td>
+      <td style={{ textAlign: "center" }}>相同的創建請求正在處理中</td>
+    </tr>
+  </tbody>
+</table>
+
+請同時檢查回應中的 code：部分業務錯誤會以 HTTP 200 返回。

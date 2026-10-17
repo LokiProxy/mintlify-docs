@@ -184,6 +184,12 @@
             ]
           },
           {
+            "tab": "API文档",
+            "pages": [
+              "untitled-page"
+            ]
+          },
+          {
             "tab": "常見問題",
             "pages": [
               "zh/faq/faq",
