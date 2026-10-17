@@ -83,7 +83,7 @@
           {
             "tab": "API Documentation",
             "pages": [
-              "api-user-guide"
+              "documentation/api-user-guide"
             ]
           },
           {
@@ -192,7 +192,7 @@
           {
             "tab": "API文档",
             "pages": [
-              "zh/api-user-guide"
+              "zh/documentation/api-user-guide"
             ]
           },
           {
