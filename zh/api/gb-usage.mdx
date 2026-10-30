@@ -1,0 +1,82 @@
+---
+sidebarTitle: "查詢動態GB流量消耗"
+title: "查詢動態GB流量消耗"
+---
+
+以下路徑均以您的服務地址為前綴。請先获取訪問令牌，再通過`Authorization`建議頭呼叫其他接口。請妥善保管帳號密碼和令牌；再次取得令牌後，舊令牌將失效。
+
+## 查詢動態住宅代理流量：
+
+`GET /wapi/consume/dynamic/chart/`
+
+```http
+Authorization: Bearer YOUR_TOKEN
+```
+
+<table>
+  <colgroup>
+    <col width="100" />
+    <col width="426" />
+  </colgroup>
+  <thead>
+    <tr>
+      <th style={{ textAlign: "center" }}>**查詢參數**</th>
+      <th style={{ textAlign: "center" }}>**說明**</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style={{ textAlign: "center" }}>`suname`</td>
+      <td style={{ textAlign: "center" }}>子帳戶用戶名；不傳或傳空值時查詢主帳戶</td>
+    </tr>
+    <tr>
+      <td style={{ textAlign: "center" }}>`st`</td>
+      <td style={{ textAlign: "center" }}>開始時間，Unix 秒</td>
+    </tr>
+    <tr>
+      <td style={{ textAlign: "center" }}>`et`</td>
+      <td style={{ textAlign: "center" }}>結束時間，Unix 秒</td>
+    </tr>
+  </tbody>
+</table>
+
+示例：`GET /wapi/consume/dynamic/chart/?suname=sub_account&st=1735689600&et=1735776000`
+
+<Tip>
+  曾購買動態住宅代理的基礎/高級套餐，或兌換過動態流量的帳號可調用此接口。
+</Tip>
+
+## 查詢高純度住宅代理流量：
+
+`GET /wapi/consume/premium/chart/`
+
+請求頭、查詢參數及响應格式與動態住宅代理流量消耗接口相同。示例：`GET /wapi/consume/premium/chart/?suname=sub_account&st=1735689600&et=1735776000`。
+
+<Tip>
+  曾購買高純度住宅代理的帳號可調用此接口。
+</Tip>
+
+## 注意：
+
+**兩個流量接口均遵循以下時間與返回規則：**
+
+- `st`、`et`任一未提供或不大於 0 時，查詢帳號時區的當天零點至當前時間。
+- `st` 與 `et`相同時，查詢從該時間起的一天；開始時間晚於結束時間將返回參數錯誤。
+
+- `results`为按時間順序排列的數據點；`period`是時間段，`timestamp`是對應的 Unix 秒，`total_traffic_count`是該時間段消耗的流量（字節）。無消耗的時間段返回 0。
+
+響應示意（數值僅用於說明格式）：
+
+```json
+{
+  "code": 200,
+  "message": "success.",
+  "results": [
+    {
+      "period": "2025-01-01T00:00:00Z",
+      "timestamp": 1735689600,
+      "total_traffic_count": 1048576
+    }
+  ]
+}
+```

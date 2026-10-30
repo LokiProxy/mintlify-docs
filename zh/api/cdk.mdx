@@ -1,0 +1,74 @@
+---
+sidebarTitle: "批量創建兌換碼（CDK）"
+title: "批量創建兌換碼（CDK）"
+---
+
+以下路徑均以您的服務地址為前綴。請先获取訪問令牌，再通過`Authorization`建議頭呼叫其他接口。請妥善保管帳號密碼和令牌；再次取得令牌後，舊令牌將失效。
+
+`POST /wapi/cdk/create/`
+
+```http
+Content-Type: application/json
+Authorization: Bearer YOUR_TOKEN
+```
+
+<table>
+  <colgroup>
+    <col width="112" />
+    <col width="325" />
+  </colgroup>
+  <thead>
+    <tr>
+      <td style={{ textAlign: "center" }}>**參數**</td>
+      <td style={{ textAlign: "center" }}>**說明**</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style={{ textAlign: "center" }}>`cdk_type`</td>
+      <td style={{ textAlign: "center" }}>必填：1 動態流量、2 IP 數量、3 移動流量</td>
+    </tr>
+    <tr>
+      <td style={{ textAlign: "center" }}>`flow`</td>
+      <td style={{ textAlign: "center" }}>類型 1、3 必填；每個兌換碼的流量，單位 GB，範圍 1～10000</td>
+    </tr>
+    <tr>
+      <td style={{ textAlign: "center" }}>`ip`</td>
+      <td style={{ textAlign: "center" }}>類型 2 必填；每個兌換碼的 IP 數量，範圍 1～10000</td>
+    </tr>
+    <tr>
+      <td style={{ textAlign: "center" }}>`day`</td>
+      <td style={{ textAlign: "center" }}>類型 1、3 的有效天數</td>
+    </tr>
+    <tr>
+      <td style={{ textAlign: "center" }}>`num`</td>
+      <td style={{ textAlign: "center" }}>必填；生成數量，範圍 1～10000</td>
+    </tr>
+  </tbody>
+</table>
+
+動態流量兌換碼範例：
+
+```json
+{
+  "cdk_type": 1,
+  "flow": 10,
+  "day": 30,
+  "num": 2
+}
+```
+
+成功時，`results`是生成的兌換碼列表；其中`Cdk`是兌換碼，`Type`是類型，`Flow`是字节数，`Ip`是 IP 數量，`Days`是有效天數：
+
+```json
+{
+  "code": 200,
+  "results": [
+    { "Cdk": "EXAMPLE1", "Type": 1, "Flow": 10000000000, "Ip": 0, "Days": 30 }
+  ]
+}
+```
+
+<Tip>
+  請確保帳戶擁有足夠的對應資源；資源不足時整批創建會失敗。請勿同時提交相同的創建請求。此接口有訪問頻率限制，收到 HTTP 429 時請稍後重試。
+</Tip>

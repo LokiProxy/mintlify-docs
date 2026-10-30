@@ -1,0 +1,29 @@
+---
+sidebarTitle: "查詢可用流量餘量"
+title: "查詢可用流量餘量"
+---
+
+以下路徑均以您的服務地址為前綴。請先获取訪問令牌，再通過`Authorization`建議頭呼叫其他接口。請妥善保管帳號密碼和令牌；再次取得令牌後，舊令牌將失效。
+
+| 接口 | 套餐 | 權限 |
+| :-: | :-: | :-: |
+| GET /wapi/balance/dynamic/ | 動態住宅代理 | 購買過動態住宅代理基礎/高級套餐，或通過CDK换取過動態流量 |
+| GET /wapi/balance/premium/ | 高純度住宅代理 | 購買過高純度住宅代理 |
+
+<Note>
+  無需請求參數。請求頭使用 Authorization: \<token> 或 Authorization: Bearer \<token>，僅查詢令牌所屬主帳戶，不支援指定使用者或子帳戶。
+</Note>
+
+```text bash
+curl 'https://server.lokiproxy.com/wapi/balance/dynamic/' -H 'Authorization: <token>'
+curl 'https://server.lokiproxy.com/wapi/balance/premium/' -H 'Authorization: <token>'
+```
+
+```json
+{"code":200,"message":"success.","results":{"surplus_flow":10000000000}}
+```
+
+- surplus_flow：可用流量字节数（整數），1 GB = 1,000,000,000 字節。動態住宅代理包含普通流量與CDK餘量；高純度住宅代理使用獨立餘量，不包含企業帳戶尚未分配的流量。
+- 當已過期、餘量不足或無餘量記錄時回傳 0；符合歷史購買或兌換條件的用戶仍可調用。
+- HTTP 200、業務碼41005（please purchase a package first.）：無對應套餐權限；41004（internal error.）：內部查詢失敗。
+- HTTP 403、業務碼 41010：令牌無效或已失效。

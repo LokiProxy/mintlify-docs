@@ -191,8 +191,17 @@
           },
           {
             "tab": "API文档",
-            "pages": [
-              "zh/documentation/api-user-guide"
+            "groups": [
+              {
+                "group": "API 使用指南",
+                "pages": [
+                  "zh/api/access-token",
+                  "zh/api/gb-usage",
+                  "zh/api/remaining-gb",
+                  "zh/api/cdk",
+                  "zh/api/common-errors"
+                ]
+              }
             ]
           },
           {

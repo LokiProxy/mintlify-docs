@@ -1,0 +1,55 @@
+---
+sidebarTitle: "获取訪問令牌"
+title: "获取訪問令牌"
+---
+
+以下路徑均以您的服務地址為前綴。請先获取訪問令牌，再通過`Authorization`建議頭呼叫其他接口。請妥善保管帳號密碼和令牌；再次取得令牌後，舊令牌將失效。
+
+1. `POST /wapi/token/`，請求體為 JSON：
+
+```http
+Content-Type: application/json
+```
+
+```json
+{
+  "username": "your_email@example.com",
+  "passwd": "your_password"
+}
+```
+
+<table>
+  <colgroup>
+    <col width="100" />
+    <col width="238" />
+  </colgroup>
+  <thead>
+    <tr>
+      <th style={{ textAlign: "center" }}>**參數**</th>
+      <th style={{ textAlign: "center" }}>**說明**</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style={{ textAlign: "center" }}>`username`</td>
+      <td style={{ textAlign: "center" }}>帳號郵箱，必填</td>
+    </tr>
+    <tr>
+      <td style={{ textAlign: "center" }}>`passwd`</td>
+      <td style={{ textAlign: "center" }}>帳號密碼，必填</td>
+    </tr>
+  </tbody>
+</table>
+
+2. 成功時，响應的`results.token`即為訪問令牌：
+
+```json
+{
+  "code": 200,
+  "results": { "token": "YOUR_TOKEN" }
+}
+```
+
+<Tip>
+  購買過動態住宅代理、高純度住宅代理或兌換過動態流量的帳號可獲得令牌。此接口有訪問頻率限制，收到 HTTP 429 時請稍後重試。
+</Tip>
