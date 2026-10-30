@@ -1,0 +1,31 @@
+---
+sidebarTitle: "Query Available Traffic Balance"
+title: "Query Available Traffic Balance"
+---
+
+Prefix the paths below with your service URL. Obtain an access token first, then send it in the `Authorization` header when calling other endpoints. Keep your credentials and token secure. Obtaining a new token invalidates the previous one.
+
+| Endpoint | Package | Required access |
+| :-: | :-: | :-: |
+| GET /wapi/balance/dynamic/ | **Rotating Residential Proxy** | Purchased Basic/Premium plans of Rotating Residential Proxies, or redeemed rotating traffic CDK. |
+| GET /wapi/balance/premium/ | **High-Purity Residential Proxy** | Previously purchased High-Purity Residential Proxy |
+
+<Note>
+  No request parameters. Use Authorization: \<token> or Authorization: Bearer \<token>. Only the token's main account is queried; selecting another user or subaccount is not supported.
+</Note>
+
+```text bash
+curl 'https://server.lokiproxy.com/wapi/balance/dynamic/' -H 'Authorization: <token>'
+curl 'https://server.lokiproxy.com/wapi/balance/premium/' -H 'Authorization: <token>'
+```
+
+**Successful response example:**
+
+```json
+{"code":200,"message":"success.","results":{"surplus_flow":10000000000}}
+```
+
+- surplus_flow: available traffic as an integer in bytes; 1 GB = 1,000,000,000 bytes. Rotating Residential Proxy includes regular and redeemed CDK traffic. High-Purity Residential Proxy uses its separate balance. Unallocated enterprise traffic is excluded.
+- Expired traffic, exhausted balances, and missing balance records return 0. Eligible historical purchases or redemptions grant access even after expiry or exhaustion.
+- HTTP 200, business code 41005 (please purchase a package first.): no corresponding package permission; 41004 (internal error.): internal query failure.
+- HTTP 403, business code 41010: invalid or expired token.

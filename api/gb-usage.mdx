@@ -1,0 +1,62 @@
+---
+sidebarTitle: "Query Rotating GB Usage"
+title: "Query Rotating GB Usage"
+---
+
+Prefix the paths below with your service URL. Obtain an access token first, then send it in the `Authorization` header when calling other endpoints. Keep your credentials and token secure. Obtaining a new token invalidates the previous one.
+
+## **Query rotating residential proxy** usage**:**
+
+`GET /wapi/consume/dynamic/chart/`
+
+```http
+Authorization: Bearer YOUR_TOKEN
+```
+
+| **Query parameter** | **Description** |
+| :-: | :-: |
+| `suname` | Sub-account username; omit or leave empty to query the main account |
+| `st` | Start time, Unix seconds |
+| `et` | End time, Unix seconds |
+
+Example: `GET /wapi/consume/dynamic/chart/?suname=sub_account&st=1735689600&et=1735776000`
+
+<Tip>
+  This API endpoint can be called by accounts that have previously purchased the Basic/Premium plans of rotating residential proxies, or have redeemed rotating traffic.
+</Tip>
+
+## **Query high-purity residential proxy traffic** usage**:**
+
+`GET /wapi/consume/premium/chart/`
+
+Use the same header, query parameters, and response format as the **rotating residential proxy** usage endpoint. Example: `GET /wapi/consume/premium/chart/?suname=sub_account&st=1735689600&et=1735776000`. 
+
+<Tip>
+  Accounts that have purchased a **high-purity residential proxy** can use this endpoint.
+</Tip>
+
+## **Please note:**
+
+**Both usage endpoints follow these rules:**
+
+- If either `st` or `et` is omitted or not greater than 0, the query covers midnight to now in the account's time zone.
+
+- If `st` equals `et`, the query covers one day from that time. A start time after the end time produces a parameter error.
+
+- `results` contains time-ordered data points. `period` identifies the time interval, `timestamp` is its Unix timestamp in seconds, and `total_traffic_count` is traffic used during that interval, in bytes. Intervals without usage return 0.
+
+Example response (values are illustrative):
+
+```json
+{
+  "code": 200,
+  "message": "success.",
+  "results": [
+    {
+      "period": "2025-01-01T00:00:00Z",
+      "timestamp": 1735689600,
+      "total_traffic_count": 1048576
+    }
+  ]
+}
+```

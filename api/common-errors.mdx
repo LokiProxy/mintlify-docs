@@ -1,0 +1,51 @@
+---
+sidebarTitle: "Common errors"
+title: "Common errors"
+---
+
+<table>
+  <colgroup>
+    <col width="100" />
+    <col width="447" />
+  </colgroup>
+  <thead>
+    <tr>
+      <td style={{ textAlign: "center" }}>`code`</td>
+      <td style={{ textAlign: "center" }}>**Meaning**</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style={{ textAlign: "center" }}>`41001`</td>
+      <td style={{ textAlign: "center" }}>Invalid query parameters or sub-account not found</td>
+    </tr>
+    <tr>
+      <td style={{ textAlign: "center" }}>`41003`</td>
+      <td style={{ textAlign: "center" }}>Incorrect account name or password</td>
+    </tr>
+    <tr>
+      <td style={{ textAlign: "center" }}>`41005`</td>
+      <td style={{ textAlign: "center" }}>Account not eligible for the requested endpoint</td>
+    </tr>
+    <tr>
+      <td style={{ textAlign: "center" }}>`41010`</td>
+      <td style={{ textAlign: "center" }}>Invalid token (HTTP 403)</td>
+    </tr>
+    <tr>
+      <td style={{ textAlign: "center" }}>`40049`</td>
+      <td style={{ textAlign: "center" }}>Invalid CDK creation parameters</td>
+    </tr>
+    <tr>
+      <td style={{ textAlign: "center" }}>`40052`</td>
+      <td style={{ textAlign: "center" }}>CDK creation failed, for example due to insufficient resources</td>
+    </tr>
+    <tr>
+      <td style={{ textAlign: "center" }}>`40901`</td>
+      <td style={{ textAlign: "center" }}>An identical creation request is already being processed</td>
+    </tr>
+  </tbody>
+</table>
+
+<Tip>
+  Always check `code` in the response: some business errors are returned with HTTP 200.
+</Tip>

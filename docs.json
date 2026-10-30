@@ -82,8 +82,17 @@
           },
           {
             "tab": "API Documentation",
-            "pages": [
-              "documentation/api-user-guide"
+            "groups": [
+              {
+                "group": "API User Guide",
+                "pages": [
+                  "api/access-token",
+                  "api/gb-usage",
+                  "api/available-traffic",
+                  "api/cdk",
+                  "api/common-errors"
+                ]
+              }
             ]
           },
           {
@@ -197,7 +206,7 @@
                 "pages": [
                   "zh/api/access-token",
                   "zh/api/gb-usage",
-                  "zh/api/remaining-gb",
+                  "zh/api/available-traffic",
                   "zh/api/cdk",
                   "zh/api/common-errors"
                 ]

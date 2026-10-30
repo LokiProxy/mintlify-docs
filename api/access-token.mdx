@@ -1,0 +1,55 @@
+---
+sidebarTitle: "Get an access token"
+title: "Get an access token"
+---
+
+Prefix the paths below with your service URL. Obtain an access token first, then send it in the `Authorization` header when calling other endpoints. Keep your credentials and token secure. Obtaining a new token invalidates the previous one.
+
+1. `POST /wapi/token/` with a JSON body:
+
+```http
+Content-Type: application/json
+```
+
+```json
+{
+  "username": "your_email@example.com",
+  "passwd": "your_password"
+}
+```
+
+<table>
+  <colgroup>
+    <col width="111" />
+    <col width="288" />
+  </colgroup>
+  <thead>
+    <tr>
+      <td style={{ textAlign: "center" }}>Field</td>
+      <td style={{ textAlign: "center" }}>Description</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style={{ textAlign: "center" }}>`username`</td>
+      <td style={{ textAlign: "center" }}>Account email; required</td>
+    </tr>
+    <tr>
+      <td style={{ textAlign: "center" }}>`passwd`</td>
+      <td style={{ textAlign: "center" }}>Account password; required</td>
+    </tr>
+  </tbody>
+</table>
+
+2. On success, use `results.token` as your access token:
+
+```json
+{
+  "code": 200,
+  "results": { "token": "YOUR_TOKEN" }
+}
+```
+
+<Tip>
+  Accounts that have purchased **rotating** **residential proxies**, **high-purity residential proxies**, or redeemed **rotating** traffic, can obtain a token. This endpoint is rate-limited; retry later if you receive HTTP 429.
+</Tip>
