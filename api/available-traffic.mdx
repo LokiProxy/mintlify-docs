@@ -26,8 +26,7 @@ curl 'https://server.lokiproxy.com/wapi/balance/premium/' -H 'Authorization: <to
 {"surplus_flow":10000000000,"flow_expire":1800000000}}
 ```
 
-flow_expire: Traffic expiration time, Unix timestamp in seconds; retains the original value when expired or exhausted, and is 0 when no record exists.
-
+- flow_expire: Traffic expiration time, Unix timestamp in seconds; retains the original value when expired or exhausted, and is 0 when no record exists.
 - surplus_flow: available traffic as an integer in bytes; 1 GB = 1,000,000,000 bytes. Rotating Residential Proxy includes regular and redeemed CDK traffic. High-Purity Residential Proxy uses its separate balance. Unallocated enterprise traffic is excluded.
 - Expired traffic, exhausted balances, and missing balance records return 0. Eligible historical purchases or redemptions grant access even after expiry or exhaustion.
 - HTTP 200, business code 41005 (please purchase a package first.): no corresponding package permission; 41004 (internal error.): internal query failure.

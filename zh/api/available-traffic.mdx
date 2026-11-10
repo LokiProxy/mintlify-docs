@@ -26,8 +26,7 @@ curl 'https://server.lokiproxy.com/wapi/balance/premium/' -H 'Authorization: <to
 {"surplus_flow":10000000000,"flow_expire":1800000000}}
 ```
 
-flow_expire：流量到期時間，Unix 秒時間戳；過期或耗盡時保留原值，無記錄時為 0。
-
+- flow_expire：流量到期時間，Unix 秒時間戳；過期或耗盡時保留原值，無記錄時為 0。
 - surplus_flow：可用流量字节数（整數），1 GB = 1,000,000,000 字節。動態住宅代理包含普通流量與CDK餘量；高純度住宅代理使用獨立餘量，不包含企業帳戶尚未分配的流量。
 - 當已過期、餘量不足或無餘量記錄時回傳 0；符合歷史購買或兌換條件的用戶仍可調用。
 - HTTP 200、業務碼41005（please purchase a package first.）：無對應套餐權限；41004（internal error.）：內部查詢失敗。
